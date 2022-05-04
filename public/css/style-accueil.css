@@ -1,0 +1,392 @@
+:root {
+    --blackPrimary: #000;
+    --whitePrimary: #fff;
+
+    --bleuSecondary: #7AB3CB;
+    --blackSecondary: #2E2929;
+}
+
+
+/* ------------------------------------------- */
+/* ------------------ FONTS ------------------ */
+/* ------------------------------------------- */
+
+/* Montserrat */
+@font-face {
+  font-family: "Montserrat-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src:  local(''),
+        url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Italic";
+  font-style: italic;
+  font-weight: 400;
+  src:  local(''),
+        url("../fonts/Montserrat/Montserrat-Italic.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-style: bold;
+  font-weight: 400;
+  src:  local(''),
+        url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+/* Open_sans */
+@font-face {
+  font-family: "OpenSans-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src:  local(''),
+        url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "OpenSans-Italic";
+  font-style: italic;
+  font-weight: 400;
+  src:  local(''),
+        url("../fonts/Open_Sans/OpenSans-Italic.ttf");
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  font-style: bold;
+  font-weight: 400;
+  src:  local(''),
+        url("../fonts/Open_Sans/OpenSans-Bold.ttf");
+}
+
+
+/* ------------------------------------------------ */
+/* ------------------ RESPONSIVE ------------------ */
+/* ------------------------------------------------ */
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 36em) {
+    .container {
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Extra Extra small phones */
+  @media screen and (max-width: 22em) {
+    /* 20em * 16 = 320px */
+    .container {
+      max-width: 22rem;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media screen and (min-width: 36em) {
+      /* 36em * 16 = 576px */
+      .container {
+        max-width: 50rem;
+      }
+      body{
+        font-size: 12px;
+      }
+    }
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media screen and (min-width: 48em) {
+      /* 48em * 16 = 768px */
+      .container {
+        max-width: 70rem;
+      }
+      body{
+        font-size: 14px;
+      }
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media screen and (min-width: 62em) {
+      /* 62em * 16 = 992px */
+      .container {
+        max-width: 90rem;
+      }
+      body{
+        font-size: 14px;
+      }
+    }
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media screen and (min-width: 80em) {
+      /* 80em * 16 = 1280px   */
+      .container {
+        max-width: 110rem;
+      }
+    }
+  /*   
+     @media (min-width: 105em) {
+      .container {
+        max-width: 128rem;
+      }
+    }  */
+  
+/* ------------------------------------------------ */
+/* ------------------   RESET    ------------------ */
+/* ------------------------------------------------ */
+
+    * {
+      margin: 0 auto;
+      line-height: 0.5rem;
+  }
+  .container {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 4rem;
+      padding-right: 4rem;
+  }
+
+body{
+  font-size: 16px;
+  /* font-family: "Montserrat-Regular", Arial, Helvetica, sans-serif; */
+  font-family: "OpenSans-Regular";
+}
+
+  .ir{
+      font: 0/0 a;
+      color: transparent;
+      border: 0;
+      text-shadow: none;
+    }
+  ul[class]{
+      list-style: none;
+  }
+  a{
+      text-decoration: none;
+  }
+
+
+/************************************************/
+/**************    FOOTER   *********************/
+/************************************************/
+
+.container-footer-top{
+    background-color: var(--blackSecondary);
+    padding: 2rem;
+}
+.container-footer-bottom{
+    background-color: var(--blackPrimary);
+}
+
+.footer-content h2{
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--bleuSecondary);
+}
+@media screen and (max-width: 36em) {
+    .footer-content h2{
+        margin-bottom:3rem;
+    }
+  }
+
+.item-footer,
+.item-footer a,
+.social-item a,
+.footer-end p,
+.footer-end a{
+    color: var(--whitePrimary);
+    size: 17px;
+    padding: 0.8rem 0;
+}
+.container-nav-footer h3{
+    color: var(--bleuSecondary);
+    size: 20px;
+    padding-bottom: 2rem;
+}
+
+
+.nav-footer,
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-footer{
+    border-top: 1px solid var(--whitePrimary);
+    padding: 2rem 0;
+}
+@media screen and (max-width: 60em) {
+    .nav-footer{
+        display:block;
+    }
+  }
+
+.container-nav-footer{
+    padding: 3rem;
+}
+  @media screen and (max-width: 36em) {
+    .container-nav-footer{
+       line-height: 1.5rem;
+       padding: 2rem 0 2rem 2rem;
+       min-width: 10rem;
+       margin-right: 1rem;
+    }
+  }
+.menu-footer a,
+.footer-end-link a {
+    color: inherit;
+    text-underline-offset: var(--offset, 0.2em);
+    text-decoration: underline 0.15em;
+    transition: --offset 400ms, text-decoration-color 400ms;
+  }
+
+.menu-footer a:hover,
+.menu-footer a:focus,
+.footer-end-link a:hover,
+.footer-end-link a:focus {
+    --offset: 0.4em;
+    text-decoration-color: var(--bleuSecondary);
+  }
+  
+@supports not (background: paint(something)) {
+    .menu-footer a,
+    .footer-end-link a {
+      transition: text-underline-offset 400ms, text-decoration-color 400ms;
+    }
+    .menu-footer a:hover,
+    .menu-footer a:focus,
+    .footer-end-link a:hover,
+    .footer-end-link a:focus {
+      text-underline-offset: 0.4em;
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+.social-icon-bar li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 2px;
+    padding: 1rem;
+  }
+@media screen and (max-width: 36em) {
+    .social-icon-bar li {
+        margin-right: 0;
+        padding: .3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+  }
+@media screen and (max-width: 30em) {
+    .social-icon-bar {
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+  }
+
+.social-icon-bar .icon {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #ffffff;
+    line-height: 3rem;
+    text-align: center;
+    background-color: #888;
+  }
+
+.social-icon-bar .icon:hover,
+.social-icon-bar .icon i:hover{
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    background-color: var(--blackPrimary);
+  }
+
+.social-icon-bar .icon i {
+    color: #fff;
+    padding: .5rem;
+    border-radius: 50%;
+  }
+.logo-facebook i:hover{
+    color: #3b5998;
+}
+.logo-twitter i:hover{
+    color: #00acee;
+}
+.list-instagram .icon:hover,
+.logo-instagram i:hover{
+        background: #d6249f;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+
+
+.footer-end,
+.footer-end-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-end-link p{
+    padding: 2rem 4rem;
+}
+@media screen and (max-width: 70em) {
+  .footer-end-link p{
+      padding: 1.5rem;
+      line-height: 1.5rem;
+  }
+  .copyright{
+    line-height: 1.5rem;
+  }
+}
+/* @media screen and (max-width: 50em) {
+    .footer-end-link p{
+        padding: 1.5rem;
+        line-height: 1.5rem;
+    }
+    .copyright{
+      line-height: 1.5rem;
+    }
+  } */
+@media screen and (max-width: 36em) {
+    .footer-end,
+    .footer-end-link {
+        display: block;
+        text-align: center;
+    }
+    .footer-end-link p{
+        padding: 1rem;
+    }
+    .footer-end p:first-of-type{
+        padding-top: 2rem;
+    }
+    .footer-end-link p:last-of-type{
+        padding-bottom: 2rem;
+    }
+  }
+  @media screen and (max-width: 22em) {
+    .footer-end p:first-of-type,
+    .footer-end-link p{
+        line-height: 1.5rem;
+        padding: .5rem;
+    }
+  }
+  @media screen and (max-width: 30em) {
+    .footer-end p:first-of-type{
+        line-height: 1rem;
+    }
+  }
+
+
+
+
+
+
+
+
+
